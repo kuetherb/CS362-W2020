@@ -11,7 +11,7 @@ from collections import defaultdict
 import testUtility
 
 #Get player names
-player_names = ["Annie","*Ben","*Carla"]
+player_names = testUtility.getNames()
 
 #number of curses and victory cards
 if len(player_names)>2:
@@ -40,7 +40,7 @@ supply = defaultdict(list,[(k,box[k]) for k in random10])
 testUtility.supplyCards(nC, nV, player_names, supply)
 
 #initialize the trash
-trash = []
+trash = testUtility.getTrash()
 
 #Costruct the Player objects
 players = testUtility.getPlayers(player_names)

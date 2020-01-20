@@ -9,6 +9,14 @@ import Dominion
 import random
 from collections import defaultdict
 
+def getNames():
+    player_names = ["Annie","*Ben","*Carla"]
+    return player_names
+
+def getTrash():
+    trash = []
+    return trash
+
 def getBoxes(nV):
     #Define box
     box = {}
@@ -56,9 +64,6 @@ def supplyCards(nC, nV, player_names, supply):
     supply["Duchy"]=[Dominion.Duchy()]*nV
     supply["Province"]=[Dominion.Province()]*nV
     supply["Curse"]=[Dominion.Curse()]*nC
-
-#initialize the trash
-trash = []
 
 def getPlayers(player_names):
     #Costruct the Player objects
